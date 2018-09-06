@@ -1,0 +1,136 @@
+.bg-yellow {
+  background: #FFD600;
+}
+
+.bg-orange {
+  background: #F55928;
+}
+
+.stat {
+  width: 100%;
+  background: #fff;
+  float: left;
+}
+.stat .stat-header {
+  height: 92px;
+  background: #F55928;
+  width: 100%;
+}
+.stat .stat-header .title {
+  float: left;
+  margin-left: 48px;
+  padding-top: 26px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+.stat .stat-header .title img {
+  width: 20px;
+  height: 20px;
+}
+.stat .stat-header ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  padding-top: 58px;
+  width: 240px;
+}
+.stat .stat-header ul li {
+  float: left;
+  width: 120px;
+  font-size: 14px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #fff;
+  opacity: 0.6;
+  text-align: center;
+  line-height: 34px;
+  height: 34px;
+  cursor: pointer;
+}
+.stat .stat-header ul li.active {
+  border-bottom: 2px solid #fff;
+  opacity: 1;
+}
+.stat .stat-header .person-info {
+  float: right;
+  margin-top: 11px;
+  margin-right: 74px;
+  position: relative;
+}
+.stat .stat-header .person-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.stat .stat-header .person-info .ava-active {
+  position: absolute;
+  background: #699f4c;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  text-align: center;
+  border-radius: 100%;
+  bottom: 0;
+  right: 0px;
+}
+.stat .stat-header .person-info .ava-active img {
+  width: 9px;
+  height: 7px;
+  vertical-align: 1px;
+}
+.stat .stat-count {
+  height: 87px;
+  text-align: center;
+  padding-top: 41px;
+  font-size: 16px;
+  color: #494949;
+}
+.stat .stat-desc {
+  height: 560px;
+  background-color: #F55928;
+  text-align: center;
+  margin: 0 20px;
+}
+.stat .stat-desc .stat-desc-title {
+  padding-top: 212px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 32px;
+  color: #fff;
+}
+.stat .stat-desc .stat-desc-content {
+  margin-top: 70px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 26px;
+}
+.stat .list {
+  margin: 30px 20px 0 20px;
+  padding-bottom: 20px;
+}
+.stat .list table {
+  width: 100%;
+}
+.stat .list table thead td {
+  background: #76d5bd;
+  height: 60px;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 0.82px;
+  text-align: center;
+}
+.stat .list table tbody td {
+  background: #fcfcfc;
+  height: 60px;
+  font-size: 14px;
+  font-size: 14px;
+  color: #666666;
+  letter-spacing: 0.82px;
+  text-align: center;
+}
+.stat .list table tbody tr:nth-child(even) td {
+  background: #ebf9f6;
+}
+.stat .list table tbody tr {
+  border-top: 1px solid #e7e7e7;
+}

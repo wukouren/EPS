@@ -1,0 +1,138 @@
+/**
+ * 待办列表样式
+ */
+
+@import "../Variables";
+
+
+// 非项目卡片样式
+.todos-item.todos-nonproject-item{
+	.todos-item-c{
+		padding-bottom: 0;
+	}
+	.todos-total-info{
+		text-align: center;
+		position: relative;
+		margin: pxTorem(18) 0 pxTorem(14);
+		overflow: hidden;
+		&:before{
+			position: absolute;top:0;
+		  top: pxTorem(22);
+	    left: 46%;
+	    right: 0;
+	    display: inline-block;
+	    content: '';
+	    width: pxTorem(26);
+		  height:1px;
+		  background: $gray-lighter-2; 
+		}
+		font{
+			display: block;
+			font-size: $font-size-xlarge;
+			color: $gray-light-1;
+		}
+		label{
+			display: block;
+			font-size: $font-size-xsmall1;
+			color: $gray-light;
+			margin-top: -(pxTorem(3));
+			margin-bottom: 0;
+		}
+		.todos-store-num{
+			float: left;
+			width: 40%;
+		}
+		.totos-total-cost{
+			float: right;
+			width: 40%;
+			font{
+				color: $brand-primary;
+			}
+		}
+	}
+	.todos-nonproject-table{
+		table{
+			width: 100%;
+			tr{
+				td{
+					color: $gray;
+					font-size: $font-size-base;
+					width: 20%;
+					height: pxTorem(37);
+					line-height: pxTorem(37);
+					text-align: center;
+					word-wrap: break-word; 
+					word-break: break-all;
+					font{
+						height: 100%;
+					}
+				}
+			}
+			thead{
+				background: $gray-lighter-5;
+				tr{
+					td{
+						font-size: $font-size-small;
+					}
+				}
+			}
+			tbody{
+				tr{
+					&:nth-child(even){
+						background: $gray-lighter-5;
+					}
+				}
+			}
+			
+		}
+	}
+}
+
+
+//空数据样式
+
+.todos-null{
+	margin-top:pxTorem(220);
+	text-align:center;
+	.icon-todos-null{
+		width:pxTorem(200);
+		margin:0 auto;
+		text-align:center;
+		img{
+			width:pxTorem(85);
+			margin:0 auto;
+		}
+	}
+	div.desc{
+		font-size:pxTorem(14);
+		color:#666666;
+		text-align:center;
+		margin-top:pxTorem(23);
+	}
+}
+.todos-nomore,.noMore-Data{
+		font-size: 16px;
+    color: #999999;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.todos-loading{
+	width:pxTorem(80);
+	height:pxTorem(70);
+	display:block;
+	margin:0 auto;
+	margin-top:pxTorem(234);
+	text-align:center;
+	img{
+		width:pxTorem(80);
+		height:pxTorem(70);
+	}
+	span{
+		display:block;
+		margin-top:pxTorem(15);
+		font-size:pxTorem(14);
+		color:#999999;
+		text-align:center;
+	}
+}

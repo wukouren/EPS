@@ -1,0 +1,160 @@
+@import "./Variables";
+
+.stat{
+	
+	width: 100%;
+	background: $body-bg;
+	float: left;
+
+	.stat-header{
+
+		height: 92px;
+		background: $app-color;
+		width: 100%;
+
+		.title{
+			float: left;
+			margin-left: 48px;
+			padding-top: 26px;
+			font-size: 16px;
+			color: #fff;
+			cursor:pointer;
+			img{
+				 width: 20px;
+   			 height: 20px;
+			}
+		}
+		
+		ul{
+			list-style-type: none;
+			padding: 0;
+			margin: 0 auto;
+			padding-top: 58px;
+			width: 240px;
+
+			li{
+				float: left;
+				width: 120px;
+				font-size: 14px;
+				font-family: $font-family-serif;
+				color: #fff;
+				opacity:0.6;
+				text-align:center;
+				line-height: 34px;
+				height: 34px;
+				cursor: pointer;
+			}
+
+			li.active{
+				border-bottom: 2px solid #fff;
+				opacity:1;
+			}
+
+		}
+	
+    .person-info{
+      float:right;
+      margin-top:11px;
+      margin-right:74px;
+      position:relative;
+      img{
+        width:40px;
+        height:40px;
+        border-radius:50%;
+
+      }
+     .ava-active{
+        position:absolute;
+        background:#699f4c;
+        width:15px;
+        height:15px;
+        line-height: 15px;
+        text-align: center;
+        border-radius:100%;
+        bottom: 0;
+        right: 0px;
+        img{
+          width: 9px;
+          height: 7px;
+          vertical-align:1px;
+        }
+      }
+    }
+	}
+
+	.stat-count{
+
+		height: 87px;
+		text-align: center;
+		padding-top:41px;
+		font-size: 16px;
+		color: #494949;
+
+	}
+
+
+	.stat-desc{
+
+		height: 560px;
+		background-color: $app-color;
+		text-align: center;
+		margin: 0 20px;
+
+		.stat-desc-title{
+
+			padding-top: 212px;
+			height: 45px;
+			line-height: 45px;
+			font-size: 32px;
+			color: #fff;	
+		}
+		.stat-desc-content{
+			margin-top: 70px;
+			font-size: 16px;
+			color: #fff;
+			line-height: 26px;
+		}
+	}
+
+	.list{
+		margin: 30px 20px 0 20px;
+    padding-bottom:20px;
+		table{
+			width: 100%;
+			thead{
+				td{
+					background: #76d5bd;
+					height: 60px;
+					font-size:14px;
+					color:#ffffff;
+					letter-spacing:0.82px;
+					text-align:center;
+				}
+			}
+			tbody{
+				td{
+					background: #fcfcfc;
+					height: 60px;
+					font-size:14px;
+					font-size:14px;
+					color:#666666;
+					letter-spacing:0.82px;
+					text-align:center;
+				}
+				
+			}
+
+			tbody tr:nth-child(even) td{
+				background: #ebf9f6;
+			}
+			tbody{
+				tr{
+					border-top:1px solid #e7e7e7;
+				}
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,303 @@
+/**
+ * 项目页面样式
+ */
+@import "./../Variables";
+
+// local pm确认供应商的需求明细 和 DOA审批
+ 
+
+.eps-item-flex{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	dd{
+		font{
+			color: $gray-light-1;
+		}
+	}
+}
+
+.eps-project-pmconfirm{
+	.eps-pmconfirm-body{
+		overflow-y: auto;
+  	-webkit-overflow-scrolling: touch;
+	}
+	.eps-np-approval-body{
+		padding: 0 pxTorem(15);
+		.eps-box{
+			padding: pxTorem(5) pxTorem(15) pxTorem(15);
+			table{
+				width: 100%;
+				height: 100%;
+				tr{
+				}
+				tr td{
+					width: 33%;
+					height: pxTorem(35);
+					line-height: pxTorem(35);
+					text-align: center;
+					padding-top: pxTorem(5);
+					position: relative;
+					&:after{
+						content: '';
+						bottom: 0;
+					  width: 200%;
+					  position: absolute;
+					  left: 0;
+					  border-bottom: 1px solid #e7e7e7;
+					  -webkit-transform-origin: 0 0;
+					  -moz-transform-origin: 0 0;
+					  -ms-transform-origin: 0 0;
+					  -o-transform-origin: 0 0;
+					  transform-origin: 0 0;
+					  -webkit-transform: scale(0.5, 0.5);
+					  -ms-transform: scale(0.5, 0.5);
+					  -o-transform: scale(0.5, 0.5);
+					  transform: scale(0.5, 0.5);
+					  -webkit-box-sizing: border-box;
+					  -moz-box-sizing: border-box;
+					  box-sizing: border-box;
+					}
+				}
+				.col-1{
+					text-align: left;
+				}
+				.col-3{
+					text-align: right;
+				}
+				thead{
+					color: $gray-lighter;
+					font-size: $font-size-small;
+				}
+				tbody{
+					color: $gray-light-1;
+					font-size: $font-size-base;
+				}
+			}
+			.p-remarks{
+				width: 100%;
+				margin-top: pxTorem(6);
+				label, font{
+					height: pxTorem(24);	
+					line-height: pxTorem(24);	
+					vertical-align: middle;			
+					margin: 0;
+				}
+				label{
+					float: left;
+					width: pxTorem(83);
+					color: $gray-lighter;
+					margin-right: pxTorem(10);
+				}
+				font{
+					width: pxTorem(260);
+					color: $gray-light-1;
+					font-size: $font-size-base;
+				}
+			}
+		}
+		.eps-box-item{
+			.eps-box{
+				padding: pxTorem(15);
+			}
+		}
+	}
+	.np-total-price{
+		label{
+			font-size: $font-size-base;
+			color: $gray-dark;
+		}
+	}
+}
+
+// 餐厅确认评价／餐厅确认收货  DOA调整审批
+.eps-project-approval-listwrap{
+	overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.eps-project-approval{
+	.money-show{
+		position: relative;
+		bottom: initial;
+		.p-totalprice{
+			max-width: 90%;
+		}
+	}
+	.eps-project-approval-header{
+		.user-card-info-i{
+			span.user-card-val{
+				max-width: pxTorem(200);
+			}
+		}
+	}
+	.eps-list-card.eps-project{
+		.eps-list-item{
+			height: pxTorem(26);
+			line-height: pxTorem(26);
+			label{
+				vertical-align: top;
+			}
+		}
+		.eps-list-inline{
+			.eps-list-item{
+				font{
+					max-width: pxTorem(60);
+				}
+			}
+		}
+	}
+	.eps-project-equipment-money{
+		.money-show-i.specail{
+			float: right;
+		}
+	}
+	.eps-item-info{
+		&:last-child{
+			text-align: left;
+		}
+	}
+	.eps-project-approval-body{
+		padding: 0 pxTorem(20);
+		.todo-card{
+			margin-top: pxTorem(15);
+		}
+		.eps-item-info-inline{
+			height: pxTorem(28);
+			line-height: pxTorem(28);
+		}
+		.eps-list-card.eps-project .eps-item-info font.eps-badge{
+			min-width: pxTorem(20);
+			text-align: center;
+		}
+	}
+}
+
+// 项目采购 list 卡片
+.eps-list-card.eps-project{
+	margin-bottom: pxTorem(20);
+	padding-bottom: pxTorem(12);
+	&:last-child{
+		margin-bottom: 0;
+	}
+	.eps-item-info{
+		&.flex-two{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		dt{
+			width: pxTorem(70);
+			text-align: left;
+			&.dt-width{
+				width:pxTorem(95);
+			}
+			&.width-min{
+				width:pxTorem(80);
+			}
+			&.width-max{
+				width:pxTorem(115);
+			}
+			&.width-mmax{
+				width:pxTorem(125);
+			}
+			&.width-maxs{
+				width:pxTorem(165);
+			}
+			&.width-left{
+				width:pxTorem(40);
+				margin-left:0;
+				// border:1px solid red;
+				text-align: center;
+			}
+		}
+		dd{
+			margin-left: pxTorem(70);
+		
+		}
+		label,font{
+			text-align: left;
+			// color:red;
+			&.margin-left{
+				margin-left:pxTorem(-20);
+			}
+		}
+	}
+	.eps-item-info{
+		height: pxTorem(22);
+		line-height: pxTorem(22);
+		&.w60{
+			width:60%;
+		}
+		&.w40{
+			width:40%;
+		}
+	}
+}
+
+.am-modal-footer{
+	.am-modal-button:after{
+		display:none;
+	}
+}
+// 项目采购infolist页面
+.eps-project-infolist-container{
+	.main-c.it-details .loading-bounce-w.fix{
+		top: 30%!important;
+	}
+	.header-adapt .header-bg-2-adapt{
+		height: pxTorem(60);
+	}
+	.header-bg-2-adapt{
+		right: 0;
+	}
+}
+.eps-list-card.eps-project.eps-empty{
+	font-size: $font-size-base;
+	color: $gray;
+}
+
+.eps-item-info{
+	dd{
+		font{
+			color: $gray-light-1;
+		}
+	}
+}
+
+// Local PM拒绝页面
+.eps-vendor-list{
+	.am-list-item{
+		&.am-input-item{
+			min-height: pxTorem(30);
+			height: pxTorem(30);
+			&:after{
+				left: pxTorem(85);
+				width: 70%;
+			}
+		}
+		.am-input-label{
+			font-size: $font-size-small;
+			color: $gray-light;
+			&.am-input-label-5{
+				width: pxTorem(85);
+				margin: 0;
+			}
+		}
+		.am-input-control{
+			min-height: pxTorem(30);
+			height: pxTorem(30);
+			line-height: pxTorem(25);
+		}
+		.am-input-control input{
+			font-size: $font-size-base;
+		}
+	}
+	.checked-btn-wrap-area{
+		width: pxTorem(50);
+		height: pxTorem(60);
+		position: absolute;
+		z-index: 300;
+		right: 0;
+		bottom: 0;
+	}
+}

@@ -1,0 +1,1066 @@
+/**
+ * 维修页面样式
+ */
+@import "./../Variables";
+
+.eps-create-device-body{
+	// margin-top: -(pxTorem(63));
+	// position: absolute;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  .eps-empty-tip-arrow{
+  	text-align: center;
+  	//margin-top: pxTorem(30);
+  }
+  .eps-box-wrap{
+  	//margin-bottom: pxTorem(30);
+  }
+  .eps-device-list{
+    position: relative;z-index: 2;
+    margin-top:pxTorem(30);
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    padding: 0 pxTorem(20) pxTorem(20);
+  }
+}
+
+//创建设备
+.eps-create-device{
+  .repairstores-specail{
+    .am-input-label.am-input-label-5{
+      height:pxTorem(28)!important;
+    }
+  }
+}
+
+@media screen and (max-width: 381px) {
+   .eps-create-device{
+    .repairstores-specail{
+      .am-input-label.am-input-label-5{
+        height:pxTorem(25)!important;
+      }
+    }
+  }
+}
+//设备--确认页面
+.main-c.device-c{
+    overflow:auto;
+}
+
+//设备响应页面
+
+.device.eps-repair-supplier-response{
+  -webkit-overflow-scrolling: touch;
+  overflow:scroll;
+  .noMore-Data{
+    margin-top:0;
+  }
+  .eps-repair-supr-content{
+    position:initial;
+  }
+}
+//设备--评估--确认 费用显示：
+
+.eps-repair-supr-content.evaluation{
+  position:initial;
+}
+.evaluation-show-money{
+    .money-show{
+      position:initial!important;
+    }
+    margin-bottom:pxTorem(50);
+}
+
+// 
+
+ .eps-search-form{
+   .search-input-w{
+     display: block;
+     margin-left:pxTorem(24);
+   }
+ }
+ .eps-list-card-wrap.eps-device-list{
+    .eps-device-evaluation-list{
+        position:relative;
+      .eps-swipe-delete{
+        overflow: hidden;
+      }
+    }
+    .eps-device-evaluation-list:first-child{
+      .eps-device-card-select{
+        margin-top: 0!important;
+      }
+    }
+ }
+// 添加设备页面
+.eps-device-card-select{
+  position: relative;
+  overflow: hidden;
+	margin-top: pxTorem(20);
+  label{
+    font-weight: 400;
+  }
+  .checked-btn-wrap{
+    position: absolute;
+    right: pxTorem(12);
+    bottom: pxTorem(4);
+  }
+  &:last-child{
+    .eps-list-card{
+      margin-bottom: 0;
+    }
+  }
+  .border-line-h.before:before{
+    width: 300%;
+    left: -(pxTorem(20));
+  }
+  .eps-list-card-bgicon{
+    position: absolute;
+    z-index: 200;
+    top: pxTorem(30);
+  }
+  .eps-item-info-inline{
+    .eps-item-info:last-child{
+      dt{
+        width: pxTorem(60);
+      }
+      dd {
+        // margin-left: pxTorem(60);
+      }
+    }
+  }
+}
+.eps-device-card-select:first-child{
+	margin-top: 0;
+}
+
+//设备订单详情页面
+.main-c.it-details{
+  .loading-bounce-w{
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+}
+.main-c.device-details,.main-c.it-details{
+  .loading-bounce-w.fix{
+   position: relative !important;
+    z-index: 22222 !important;
+    margin-top: pxTorem(40);
+    bottom: initial !important;
+    top: initial !important;
+    .loading-gif{
+      img{
+        width:80px;
+        height:70px;
+      }
+    }
+  }
+  .noMore-Data{
+    font-size: 16px;
+    color: #999999;
+    text-align: center;
+    margin-top: pxTorem(20);
+    margin-bottom:pxTorem(30);
+  }
+}
+// 供应商响应页面
+ .eps-repair-supr-content.device{
+  overflow:scroll;
+  .loading-bounce-w.fix{
+   position: absolute !important;
+    z-index: 22222 !important;
+    margin-top: 20px;
+    bottom: initial !important;
+    top: initial !important;
+    .loading-gif{
+      img{
+        width:80px;
+        height:70px;
+      }
+    }
+  }
+ }
+.eps-repair-supr-content{
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  .eps-box-wrap{
+	  width: auto;
+    margin: pxTorem(5) pxTorem(20) pxTorem(16);
+    .eps-list-card-wrap.eps-device-list{
+    }
+  }
+  .eps-box{
+    height: pxTorem(50);
+    line-height: pxTorem(50);
+    .eps-add-small{
+      padding-left: pxTorem(22);
+      i{
+        vertical-align: middle;
+      }
+      font{
+        margin-left: pxTorem(11);
+        font-size: pxTorem(14);
+        color: #666666;
+      }
+    }
+  }
+  .eps-list-card-wrap{
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+	  padding:0 pxTorem(20);
+    .eps-device-card-select{
+      margin-bottom: pxTorem(20);
+    }
+  }
+}
+//
+.eps-repair-supplier-response.equipment{
+  overflow:scroll;
+  .user-card .user-card-c .user-card-info .user-card-info-i{
+    
+    .user-card-val.ellipsis{
+      vertical-align: middle;
+      line-height: pxTorem(20);
+
+    }
+  }
+}
+
+//
+.root-container.device{
+   //overflow:scroll;
+  .root-container-w{
+    // 把这个去掉了，因为加着这个 页面底部的按钮就显示不出来了
+    // overflow:scroll;
+    .todo-btn{
+     
+    }
+    .todo-btn.showLine{
+      position:relative;
+    }
+    .todo-btn.showLine:after{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        display: inline-block;
+        content: ' ';
+        width: 200%;
+        height:1px;
+        background: #e7e7e7;
+        -webkit-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        -o-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: scale(0.5, 0.5);
+        -ms-transform: scale(0.5, 0.5);
+        -o-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .main-c.device-c{
+      margin-bottom:200px;
+    }
+  }
+}
+//设备--维修--采购详情页面
+
+.root-container.device-info-list{
+  .device-details{
+     padding-bottom:pxTorem(50);
+    .todo-card.zoomIn.specail-zhailei{
+      padding-bottom:pxTorem(20);
+    }
+    .todo-card{
+      .todo-card-c{
+        .todo-fitting{
+          .todo-info-label{
+            float: left;
+            width: 35%;
+            margin-right: 5%;
+            color: #999999;
+            vertical-align: top;
+          }
+        }
+      }
+    }
+    .todo-card{
+      .todo-info.deviceinfo{
+       .todo-info-i.border-line-h.after{
+          i{
+            display:none;
+          }
+        }
+        .deviceinfo-c{
+          .todo-info-l{
+            width:100%;
+            .todo-info-label{ 
+              width: 19.5%;
+            }
+          }
+        }
+      }
+    }
+    .todo-info.deviceinfo{
+      padding-bottom:0;
+    }
+    .todo-fitting.deviceFee{
+      padding:0;
+      .todo-fitting-i{
+          position:relative;
+          padding: 0 0 0.4347826087rem 0;
+
+      }
+    }
+    .todo-fitting.deviceFee{
+      .todo-fitting-i:after{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: inline-block;
+        content: ' ';
+        width: 200%;
+        height: 1px;
+        background: #e7e7e7;
+        -webkit-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        -o-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: scale(0.5, 0.5);
+        -ms-transform: scale(0.5, 0.5);
+        -o-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+    }
+
+    
+    .todo-fitting.deviceFee,.todo-fitting.partList{
+      
+    }
+  }
+  .loading-bounce-w{
+    margin-bottom:pxTorem(30);
+  }
+}
+.maintenance-details-custom{
+  overflow-y:auto;
+}
+// 设备维修详单页面
+.maintenance-details-wrap{
+  padding: 0 pxTorem(20);
+  margin-top: pxTorem(20);
+  
+  // 带title的list卡片  费用信息
+  .eps-list-card{
+    &.eps-card-with-title{
+      padding: pxTorem(12) 0 pxTorem(16);
+      .eps-card-title{
+        padding: 0 0 pxTorem(12) 0;
+        color: $gray-light;
+        font{
+          margin-left: pxTorem(20);
+          font-size: $font-size-base;
+        }
+        i{
+          float: right;
+          margin-right: pxTorem(20);
+          margin-top: 0;
+          vertical-align: middle;
+        }
+      }
+      .eps-list-card-bgicon{
+        top: pxTorem(23);
+      }
+      .eps-card-body{
+        padding: pxTorem(10) pxTorem(20) 0;
+        color: $gray-light;
+        font-size: $font-size-base;
+        dt{
+          margin-bottom: 0;
+          font-weight: 400;
+          float: left;
+          overflow: hidden;
+          clear: left;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        dt{
+          &:before{
+            display: table;
+            content: " ";
+          }
+          &:after{
+            content: " ";
+            clear: both;
+          }
+        }
+      }
+      .cost-row{
+        height: pxTorem(25);
+      }
+      .cost-nums,
+      .cost-item{
+        width:50%;
+        height: pxTorem(25);
+        line-height: pxTorem(25);
+        dt{
+          width: pxTorem(60);
+          overflow: hidden;
+          /*margin-right: pxTorem(16);*/
+        }
+        dd{
+          display: inline-block;
+          width:50%;
+          vertical-align: top;
+        }
+      }
+      .cost-nums{
+        margin: pxTorem(8) 0 pxTorem(8);
+        dd{
+          margin-top: pxTorem(3);
+        }
+      }
+      .cost-row{
+        .cost-item:first-child{
+          float: left;
+        }
+        .cost-item:last-child{
+          float: right;
+          dt{
+            width:pxTorem(74);
+            margin-right: pxTorem(4);
+            text-align: right;
+          }
+        }
+      }
+      .cost-other-info{
+        margin-top: pxTorem(11);
+        dd{
+          margin-left: pxTorem(90);
+        }
+      }
+    }
+  }
+  // 维修详单表单list
+  .parts-form-list{
+    margin-top: pxTorem(16);
+    padding-bottom: pxTorem(60);
+    .am-list.jw-list .am-list-body{
+      padding: 0!important;
+    }
+    .am-list-content{
+      display: none!important;
+    }
+    // 单个表单样式
+    .parts-form-item{
+      position: relative;
+      padding-top: pxTorem(10);
+      margin-top:pxTorem(10);
+      .icon-close{
+        position: absolute;
+        right: pxTorem(20);
+        top: pxTorem(15);
+        z-index: 200;
+      }
+      .ant-form-item .ant-form-item-control-wrapper{
+        border: 0!important;
+      }
+      .Form-item-c{
+        text-align: left!important;
+        &:after{
+          position: absolute;
+          left: 90px;
+          right:0;
+          bottom: 0;
+          display: inline-block;
+          content: ' ';
+          width: 130%;
+          height:1px;
+          //border-bottom:1px solid #e7e7e7;
+          background: #e7e7e7;
+          -webkit-transform-origin: 0 0;
+          -moz-transform-origin: 0 0;
+          -ms-transform-origin: 0 0;
+          -o-transform-origin: 0 0;
+          transform-origin: 0 0;
+          -webkit-transform: scale(0.5, 0.5);
+          -ms-transform: scale(0.5, 0.5);
+          -o-transform: scale(0.5, 0.5);
+          transform: scale(0.5, 0.5);
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+        .am-input-item{
+          padding-right: 25px!important;
+        }
+        .am-input-control input{
+          text-align: left!important;
+        }
+        .am-list-extra{
+          text-align: left!important;
+        }
+        .am-list-arrow{
+          margin-right: 25px;
+        }
+      }
+    }
+    .parts-form-item:first-child{
+      margin-top:0;
+    }
+  }
+
+  .ant-form-item .Form-item-w,
+  .ant-form-item .Form-item-w .ant-form-item-label,
+  .maintenance-details-wrap .parts-form-list .parts-form-item .Form-item-c,
+  .am-list.jw-list .am-list-body .am-list-item.am-input-item .am-input-control input,
+  .am-list.jw-list .am-list-body .am-list-item.am-input-item .am-input-control,
+  .am-list.jw-list .am-list-body .am-list-item .am-list-line .am-list-extra,
+  .am-list.jw-list .am-list-body .am-list-item .am-list-line{
+    height: pxTorem(35)!important;
+    line-height: pxTorem(35)!important;
+  }
+  .ant-form-item .Form-item-w .Form-item-c .am-list-item.am-input-item{
+    margin-top: 0;
+  }
+  .am-list.jw-list .am-list-body .am-list-item.am-input-item .am-input-control input{
+    padding-top: 0!important;
+  }
+
+}
+
+.maintenance-cost-card{
+  box-shadow: 0 0 10px 0 rgba(128,128,128,0.12);
+  border-radius:pxTorem(8);
+  background: $white;
+}
+
+
+// 新建工程维修
+.eps-create-project{
+  .eps-box{
+    padding-bottom: pxTorem(38);
+    .am-list-line{
+      &:after{
+        position: absolute;
+        left: 50px;
+        right:0;
+        bottom: 0;
+        display: inline-block;
+        content: ' ';
+        width: 156%;
+        height:1px;
+        //border-bottom:1px solid #e7e7e7;
+        background: #e7e7e7;
+        -webkit-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        -o-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: scale(0.5, 0.5);
+        -ms-transform: scale(0.5, 0.5);
+        -o-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      .am-list-extra{
+        flex-basis: 75%;
+        text-align: left;
+        color: $gray-dark;
+      }
+    }
+    .am-input-label-5{
+      padding:8px 0 0;
+    }
+  }
+}
+.repairstores{
+  .am-list-item{
+    min-height: pxTorem(20)!important;
+    padding-left: pxTorem(20);
+    .am-list-line{
+      min-height: pxTorem(20)!important;
+      padding-right: pxTorem(20);
+	    padding-top: pxTorem(5);
+	    padding-bottom: pxTorem(5);
+      .am-list-arrow{
+        width: pxTorem(8);
+        height: pxTorem(13);
+        margin-top: pxTorem(0);
+      }
+    }
+    .am-list-content{
+      color: $gray-light!important;
+      font-size: $font-size-base!important;
+      font-weight: 400;
+	    line-height: pxTorem(35)!important;
+	    padding:0!important;
+    }
+    .am-list-extra{
+      font-size: $font-size-large!important;
+      padding-top: pxTorem(0)!important;
+      padding-bottom: 0!important;
+    }
+  }
+}
+
+// 搜索工程页面
+.eps-projects-search{
+  .eps-device-card-select .checked-btn-wrap{
+    top: pxTorem(10);
+    right: pxTorem(10);
+  }
+}
+
+// 新建IT维修
+.eps-create-it{
+  input:disabled{
+    color: #494949!important;
+    opacity: 1!important;
+  }
+  .eps-create-it-body{
+    padding-top: pxTorem(20);
+    /*margin-bottom: pxTorem(50);*/
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    .eps-box-wrap{
+      margin-bottom: pxTorem(32);
+      .am-input-item{
+        label{
+          margin-bottom: 0;
+        }
+      }
+      .label-required{
+        position: relative;
+        i.icon-required{
+          right: pxTorem(10);
+          top: pxTorem(5)
+        }
+      }
+    }
+
+    .upload-file{
+      box-shadow: none;
+    }
+    .eps-box-with-addbtn{
+      min-height: pxTorem(194);
+    }
+    .eps-cs-otherinfo{
+      position: absolute;
+      bottom: 0;
+      max-width: 100%;
+      &.eps-cs-relative{
+        position: relative;
+      }
+      &.eps-cs-fix-absolute{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+    }
+    
+    .eps-cs-fileupload{
+      padding: 0;
+    }
+    .am-input-item{
+      min-height: pxTorem(35);
+      height: pxTorem(35);
+      padding-left: pxTorem(20)!important; 
+      padding-right: pxTorem(15)!important; 
+      .am-input-label{
+        width: pxTorem(95)!important;
+        font-size: $font-size-base!important;
+        color: $gray-light!important;
+        margin-right: 0;
+        i{ 
+          position: absolute;
+          right: pxTorem(20);
+          top: pxTorem(10);
+        }
+      }
+      &:after{
+        position: absolute;
+        left: pxTorem(110);
+        right:0;
+        bottom: 0;
+        display: inline-block;
+        content: ' ';
+        width: 130%;
+        height:1px;
+        //border-bottom:1px solid #e7e7e7;
+        background: #e7e7e7;
+        -webkit-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        -o-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: scale(0.5, 0.5);
+        -ms-transform: scale(0.5, 0.5);
+        -o-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      &.eps-it-tsi:after{
+        display: none;
+      }
+    }
+    .am-input-control{
+      font-size: $font-size-base!important;
+      input{
+        font-size: $font-size-base!important;
+        color: $gray-light-1!important;
+      }
+    }
+    .eps-empty-tip-arrow{
+      height: pxTorem(120);
+      margin: 0;
+    }
+    .am-list-item.eps-form-memo{
+      margin-left: 0!important;
+      margin-right: 0!important;
+      line-height: pxTorem(32);
+      .am-input-label{
+        width: pxTorem(110);
+      }
+      &:after{
+        left: pxTorem(110)!important;
+      }
+    }
+    // it页面的文件上传
+    .upload-file{
+      position: relative;
+      bottom: 0;
+    }
+    .eps-cs-fileupload{
+      /*margin-top: -(pxTorem(40));*/
+    }
+  }
+  .am-list-body{
+    padding: 0 pxTorem(30)!important;
+    border: 0!important;
+    .am-list-content{
+      color: #999999 !important;
+      font-weight: 400!important;
+    }
+  }
+  .eps-cs-fileupload{
+    padding: 0;
+  }
+  // cost
+  .eps-cit-cost{
+    background: #fff;
+    padding-top: pxTorem(5);
+    /*height: pxTorem(140);*/
+    padding-bottom: pxTorem(5);
+    /*margin-bottom: pxTorem(10);*/
+    .cost-form-inline{
+      /*min-height: pxTorem(50);*/
+      height: pxTorem(35);
+      line-height: pxTorem(35);
+      .eps-inline{
+        &:first-child{
+          float: left;
+          width: 50%;
+        }
+        &:last-child{
+          float: right;
+          width: 45%;
+          height: pxTorem(35)!important;
+          min-height: pxTorem(35)!important;
+          position: relative;
+          .am-list-item{
+            height: pxTorem(35)!important;
+            min-height: pxTorem(35)!important;
+          }
+          &:after{
+            position: absolute;
+            left: pxTorem(60);
+            right:0;
+            bottom: 0;
+            display: inline-block;
+            content: ' ';
+            width: 115%;
+            height:1px;
+            //border-bottom:1px solid #e7e7e7;
+            background: #e7e7e7;
+            -webkit-transform-origin: 0 0;
+            -moz-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+            -o-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: scale(0.5, 0.5);
+            -ms-transform: scale(0.5, 0.5);
+            -o-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+          }
+        }
+        .am-list.jw-list .am-list-body .am-list-item .am-list-line .am-list-content,
+        .am-list.jw-list .am-list-body .am-list-item .am-list-line .am-list-extra{
+          height: pxTorem(35)!important;
+          min-height: pxTorem(35)!important;
+        }
+      }
+      .am-input-item.jw-inline-specail{
+        width: 55%!important;
+        padding-right: 0!important;
+        .am-input-label{
+          width: pxTorem(120)!important;
+        }
+      }
+      .am-input-item.jw-inline-specail:after{
+        left:pxTorem(130)!important;
+        right: 0;
+      }
+    }
+    .am-input-item.jw-inline-specail2{
+        .am-input-label{
+          width: pxTorem(120)!important;
+        }
+      }
+      .am-input-item.jw-inline-specail2:after{
+        left:pxTorem(130)!important;
+        right: 0;
+      }
+  }
+}
+
+
+
+.eps-it-list{
+  padding: 0 pxTorem(20);
+  margin-bottom: pxTorem(16);
+  .eps-list-card{}
+  .eps-list-inline{
+    .eps-list-item{
+      width: 50%;
+      font{
+        color: $gray-dark;
+      }
+      font.ellipsis{
+        max-width: pxTorem(75);
+      }
+      label{
+        margin-right: pxTorem(12);
+      }
+    }
+  }
+}
+
+
+// it维修详单
+.eps-maintenance-details-it{
+  .maintenance-details-wrap{
+    .eps-list-card-bgicon{
+      top: pxTorem(28);
+    }
+  }
+  .ant-form-item .Form-item-w,
+  .ant-form-item .Form-item-w .ant-form-item-label,
+  .maintenance-details-wrap .parts-form-list .parts-form-item .Form-item-c,
+  .am-list.jw-list .am-list-body .am-list-item.am-input-item .am-input-control input,
+  .am-list.jw-list .am-list-body .am-list-item.am-input-item .am-input-control,
+  .am-list.jw-list .am-list-body .am-list-item .am-list-line .am-list-extra,
+  .am-list.jw-list .am-list-body .am-list-item .am-list-line{
+    height: pxTorem(35)!important;
+    line-height: pxTorem(35)!important;
+  }
+  .ant-form-item .Form-item-w .Form-item-c .am-list-item.am-input-item{
+    margin-top: 0;
+  }
+  .am-list.jw-list .am-list-body .am-list-item.am-input-item .am-input-control input{
+    padding-top: 0!important;
+  }
+  .eps-list-card-bgicon{
+    top: pxTorem(23);
+  }
+}
+
+// 带设备信息的header
+.header{
+  &.header-with-memo{
+    .header-c{
+    }
+    .header-bg-2{
+      top:100%;
+      &.mgt-large{
+        top: pxTorem(129);
+      }
+    }
+    &.xheight{
+      .header-bg-2{
+        top: 100%;
+      }
+    }
+  }
+}
+
+.eps-modal.fix .eps-dialog-w{
+  top: 50%;
+}
+
+// IT设备配件
+.eps-device-card-select.itparts-card{
+  .checked-btn-wrap{
+    bottom: pxTorem(6);
+  }
+}
+.eps-create-it .eps-create-it-body
+.eps-create-project .repairstores {
+  .eps-placeholder{
+    font-size: $font-size-base;
+    color: $gray-lighter;
+  }
+  .am-input-label .label-required{
+    position: relative;
+    i.icon-required{
+      position: relative;
+      top: -(pxTorem(5));
+      right: -(pxTorem(5));
+    }
+  }  
+}
+
+// IT设备卡片
+.repair-it-list{
+  .header-adapt .header-bg-2-adapt{
+    right: 0;
+  }
+}
+.todo-card-it{
+  .border-line-h.after{
+    &:last-child{
+      &:after{
+        display: none;
+      }
+    }
+  }
+  .todo-fitting{
+    .border-wrap{
+      padding: 0 pxTorem(20);
+    }
+    .border-line-h:before{
+      top: -(pxTorem(18));
+    }
+  }
+  .todo-info-block{
+    span.todo-info-label{
+      width: 22%!important;
+    }
+    span.todo-info-val{
+      width: 75%!important;
+    }
+  }
+  .todo-fitting-info.fitting-info-block{
+    .todo-fitting-msg{
+      width: 100%!important;
+      .todo-info-val.ellipsis{
+        width: 65%!important;
+      }
+    }
+  }
+  .todo-fitting-info.custom-specail{
+    .todo-fitting-msg{
+      width: 100%!important;
+      .todo-info-val.ellipsis{
+      }
+    }
+    
+  }
+}
+
+
+// fix header
+.my-fix-header{
+  .header{
+    .header-bg-2-adapt{
+      right: 0;
+    }
+  }
+}
+
+
+// 添加配件页面
+.eps-parts-search{
+  .eps-list-card .eps-list-item{
+    &.eps-lsparts-item{
+      label{
+        width: pxTorem(107);
+        margin-right: 0;
+        float: left;
+      }
+      font{
+        display: block;
+        float: left;
+        max-width: pxTorem(210);
+      }
+    }
+  }
+  .eps-box-with-owner{
+    padding: pxTorem(20);
+  }
+}
+
+.eps-maintenance-details-device .eps-second-body{
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom:pxTorem(20);
+}
+
+// it设备编辑
+.am-list.jw-list .am-list-body .am-list-item.am-input-item.edit-equipment-it-input .am-input-control{
+  input{
+    line-height: initial !important;
+    &::-webkit-input-placeholder,
+    &:-moz-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder{
+      padding-top: pxTorem(12) !important;
+    }
+  }
+}
+.am-list.jw-list .am-list-body .am-list-item.am-input-item.edit-fitting-input .am-input-control{
+  input{
+    line-height: initial !important;
+  }
+}
+
+.todo-card-it{
+  span.todo-info-val{
+    vertical-align: top;
+  }
+}
+
+.loading-bounce-main{
+  position: fixed;top:50%;
+  left:0;right: 0;
+  margin-top: -15%;
+  .loading-gif{
+    position: relative!important;
+    margin:0 auto!important;
+    text-align: center!important;
+    top:0!important;
+    left:0!important;
+  }
+  .loading-bounce-tip{
+    font-size: pxTorem(14);
+    color: #999999;
+    text-align: center;
+    margin: pxTorem(15) auto 0;
+  }
+}

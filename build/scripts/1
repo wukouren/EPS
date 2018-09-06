@@ -1,0 +1,2084 @@
+webpackJsonp([1],{
+
+/***/ 895:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _constants = __webpack_require__(197);
+
+module.exports = {
+	path: 'approval/:orderid',
+	indexRoute: {
+		onEnter: function onEnter() {
+			jw.setTitle({ title: '审批流程' });
+		},
+		getComponent: function getComponent(nextState, cb) {
+			__webpack_require__.e/* require.ensure */(27).then((function (require) {
+				var model = __webpack_require__(1956)["default"];
+				(0, _constants.registerModel)(app, model);
+				cb(null, __webpack_require__(1872)["default"]);
+			}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+		}
+	}
+};
+
+/***/ }),
+
+/***/ 896:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _constants = __webpack_require__(197);
+
+module.exports = {
+	path: 'file/:orderid',
+	indexRoute: {
+		onEnter: function onEnter() {
+			jw.setTitle({ title: '附件' });
+		},
+		getComponent: function getComponent(nextState, cb) {
+			__webpack_require__.e/* require.ensure */(13).then((function (require) {
+				var model = __webpack_require__(1888)["default"];
+				(0, _constants.registerModel)(app, model);
+				cb(null, __webpack_require__(1873)["default"]);
+			}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+		}
+	}
+};
+
+/***/ }),
+
+/***/ 897:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _constants = __webpack_require__(197);
+
+module.exports = {
+	path: 'filehistory/:orderid',
+	indexRoute: {
+		onEnter: function onEnter() {
+			jw.setTitle({ title: '附件' });
+		},
+		getComponent: function getComponent(nextState, cb) {
+			__webpack_require__.e/* require.ensure */(13).then((function (require) {
+				var model = __webpack_require__(1888)["default"];
+				model.state['history'] = true;
+				(0, _constants.registerModel)(app, model);
+				cb(null, __webpack_require__(1873)["default"]);
+			}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+		}
+	}
+};
+
+/***/ }),
+
+/***/ 898:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _constants = __webpack_require__(197);
+
+module.exports = {
+	path: 'log/:orderid',
+	indexRoute: {
+		onEnter: function onEnter() {
+			jw.setTitle({ title: '流程日志' });
+		},
+		getComponent: function getComponent(nextState, cb) {
+			__webpack_require__.e/* require.ensure */(58).then((function (require) {
+				var model = __webpack_require__(1958)["default"];
+				(0, _constants.registerModel)(app, model);
+				cb(null, __webpack_require__(1899)["default"]);
+			}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+		}
+	}
+};
+
+/***/ }),
+
+/***/ 899:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _constants = __webpack_require__(197);
+
+module.exports = {
+	path: 'maintenance',
+	getChildRoutes: function getChildRoutes(partialNextState, cb) {
+		new Promise(function(resolve) { resolve(); }).then((function (require) {
+			cb(null, [{
+				path: 'equipment',
+				getChildRoutes: function getChildRoutes(partialNextState, cb) {
+					new Promise(function(resolve) { resolve(); }).then((function (require) {
+						cb(null, [{
+							path: 'approval/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {
+									// NProgress.done();
+									jw.setTitle({ title: '审批' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(8).then((function (require) {
+										var model = __webpack_require__(1845)["default"];
+										model.state['model_type'] = 'equipment';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1842)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							path: 'reply/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {
+									// NProgress.done();
+									jw.setTitle({ title: '供应商回复' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(24).then((function (require) {
+										var model = __webpack_require__(1891)["default"];
+										model.state['model_type'] = 'equipment';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1876)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							path: 'reply-list/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {
+									// NProgress.done();
+									jw.setTitle({ title: '设备明细' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(25).then((function (require) {
+										var model = __webpack_require__(1892)["default"];
+										model.state['model_type'] = 'equipment';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1877)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							path: 'confirm/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {
+									// NProgress.done();
+									jw.setTitle({ title: '保养确认' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(11).then((function (require) {
+										// let model = require('../models/Maintenance/Confrim')["default"];
+										// registerModel(app,model);
+										var model = __webpack_require__(1889)['default'];
+										model.state['model_type'] = 'equipment';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1874)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							path: 'device-list/:orderid',
+							//Assess
+							indexRoute: {
+								onEnter: function onEnter() {
+									// NProgress.done();
+									jw.setTitle({ title: '设备明细' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(18).then((function (require) {
+										var model = __webpack_require__(1890)['default'];
+										model.state['model_type'] = 'equipment';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1875)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							path: 'assess/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {
+									// NProgress.done();
+									jw.setTitle({ title: '订单确认评价' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(7).then((function (require) {
+										var model = __webpack_require__(1846)['default'];
+										model.state['model_type'] = 'equipment';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1843)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}]);
+					}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+				}
+			}, {
+				path: 'project',
+				getChildRoutes: function getChildRoutes(partialNextState, cb) {
+					new Promise(function(resolve) { resolve(); }).then((function (require) {
+						cb(null, [{
+							path: 'approval/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {
+									// NProgress.done();
+									jw.setTitle({ title: '审批' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(8).then((function (require) {
+										var model = __webpack_require__(1845)["default"];
+										model.state['model_type'] = 'project';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1842)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							path: 'reply/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {
+									// NProgress.done();
+									jw.setTitle({ title: '供应商回复' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(24).then((function (require) {
+										var model = __webpack_require__(1891)["default"];
+										model.state['model_type'] = 'project';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1876)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							path: 'reply-list/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {
+									// NProgress.done();
+									jw.setTitle({ title: '设备明细' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(25).then((function (require) {
+										var model = __webpack_require__(1892)["default"];
+										model.state['model_type'] = 'project';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1877)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							path: 'confirm/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {
+									// NProgress.done();
+									jw.setTitle({ title: '保养确认' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(11).then((function (require) {
+										// let model = require('../models/Maintenance/Confrim')["default"];
+										// registerModel(app,model);
+										var model = __webpack_require__(1889)['default'];
+										model.state['model_type'] = 'project';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1874)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							path: 'device-list/:orderid',
+							//Assess
+							indexRoute: {
+								onEnter: function onEnter() {
+									// NProgress.done();
+									jw.setTitle({ title: '设备明细' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(18).then((function (require) {
+										var model = __webpack_require__(1890)['default'];
+										model.state['model_type'] = 'project';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1875)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							path: 'assess/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {
+									// NProgress.done();
+									jw.setTitle({ title: '订单确认评价' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(7).then((function (require) {
+										var model = __webpack_require__(1846)['default'];
+										model.state['model_type'] = 'project';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1843)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}]);
+					}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+				}
+			}, {
+				path: 'view',
+				getChildRoutes: function getChildRoutes(partialNextState, cb) {
+					new Promise(function(resolve) { resolve(); }).then((function (require) {
+						cb(null, [{
+							path: 'equipment/:orderid',
+							indexRoute: {
+								onEnter: function onEnter(location) {
+									// jw.setTitle({title:'途中订单'});
+									if (location.location.query && location.location.query.sta) {
+										switch (location.location.query.sta) {
+											case '1':
+												jw.setTitle({ title: '在途订单' });
+												break;
+											case '2':
+												jw.setTitle({ title: '历史订单' });
+												break;
+										}
+									}
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(8).then((function (require) {
+										var model = __webpack_require__(1845)["default"];
+										model.state['model_type'] = 'equipment';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1842)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							path: 'project/:orderid',
+							indexRoute: {
+								onEnter: function onEnter(location) {
+									// jw.setTitle({title:'途中订单'});
+									if (location.location.query && location.location.query.sta) {
+										switch (location.location.query.sta) {
+											case '1':
+												jw.setTitle({ title: '在途订单' });
+												break;
+											case '2':
+												jw.setTitle({ title: '历史订单' });
+												break;
+										}
+									}
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(8).then((function (require) {
+										var model = __webpack_require__(1845)["default"];
+										model.state['model_type'] = 'project';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1842)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}]);
+					}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+				}
+			}, {
+				path: 'vieworder',
+				getChildRoutes: function getChildRoutes(partialNextState, cb) {
+					new Promise(function(resolve) { resolve(); }).then((function (require) {
+						cb(null, [{
+							path: 'equipment/:orderid',
+							indexRoute: {
+								onEnter: function onEnter(location) {
+									if (location.location.query && location.location.query.sta) {
+										switch (location.location.query.sta) {
+											case '1':
+												jw.setTitle({ title: '在途订单' });
+												break;
+											case '2':
+												jw.setTitle({ title: '历史订单' });
+												break;
+										}
+									}
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(7).then((function (require) {
+										var model = __webpack_require__(1846)['default'];
+										model.state['model_type'] = 'equipment';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1843)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							path: 'project/:orderid',
+							indexRoute: {
+								onEnter: function onEnter(location) {
+									if (location.location.query && location.location.query.sta) {
+										switch (location.location.query.sta) {
+											case '1':
+												jw.setTitle({ title: '在途订单' });
+												break;
+											case '2':
+												jw.setTitle({ title: '历史订单' });
+												break;
+										}
+									}
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(7).then((function (require) {
+										var model = __webpack_require__(1846)['default'];
+										model.state['model_type'] = 'project';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1843)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}]);
+					}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+				}
+			}]);
+		}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+	}
+}; // 保养页面相关路由
+
+/***/ }),
+
+/***/ 900:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _constants = __webpack_require__(197);
+
+module.exports = {
+	path: 'minorpurchase',
+	getChildRoutes: function getChildRoutes(partialNextState, cb) {
+		new Promise(function(resolve) { resolve(); }).then((function (require) {
+			cb(null, [{
+				path: 'approval',
+				getChildRoutes: function getChildRoutes(partialNextState, cb) {
+					new Promise(function(resolve) { resolve(); }).then((function (require) {
+						cb(null, [{
+							path: 'equipment/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {
+									// NProgress.done();
+									jw.setTitle({ title: 'DOA审批' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(6).then((function (require) {
+										var model = __webpack_require__(1837)["default"];
+										model.state['model_type'] = 'equipment';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1835)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							path: 'equipmentDetail',
+							indexRoute: {
+								onEnter: function onEnter() {
+									jw.setTitle({ title: '工程明细' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(52).then((function (require) {
+										// let model=require('../models/Minorpurchase/equipmentDetail')["default"];
+										// registerModel(app,model);
+										callback(null, __webpack_require__(1902)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							path: 'it/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {
+									// NProgress.done();
+									jw.setTitle({ title: 'DOA审批' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(6).then((function (require) {
+										var model = __webpack_require__(1837)["default"];
+										model.state['model_type'] = 'it';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1835)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}]);
+					}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+				}
+			}, {
+				path: 'vieworder',
+				getChildRoutes: function getChildRoutes(partialNextState, cb) {
+					new Promise(function(resolve) { resolve(); }).then((function (require) {
+						cb(null, [{
+							path: 'equipment/:orderid',
+							indexRoute: {
+								onEnter: function onEnter(location) {
+									// NProgress.done();
+									if (location.location.query && location.location.query.sta) {
+										switch (location.location.query.sta) {
+											case '1':
+												jw.setTitle({ title: '在途订单' });
+												break;
+											case '2':
+												jw.setTitle({ title: '历史订单' });
+												break;
+										}
+									}
+									// jw.setTitle({title:'途中订单'});
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(6).then((function (require) {
+										var model = __webpack_require__(1837)["default"];
+										model.state['model_type'] = 'equipment';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1835)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							path: 'it/:orderid',
+							indexRoute: {
+								onEnter: function onEnter(location) {
+									// NProgress.done();
+									// jw.setTitle({title:'途中订单'});
+									if (location.location.query && location.location.query.sta) {
+										switch (location.location.query.sta) {
+											case '1':
+												jw.setTitle({ title: '在途订单' });
+												break;
+											case '2':
+												jw.setTitle({ title: '历史订单' });
+												break;
+										}
+									}
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(6).then((function (require) {
+										var model = __webpack_require__(1837)["default"];
+										model.state['model_type'] = 'it';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1835)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}]);
+					}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+				}
+			}, {
+				path: 'view',
+				getChildRoutes: function getChildRoutes(partialNextState, cb) {
+					new Promise(function(resolve) { resolve(); }).then((function (require) {
+						cb(null, [{
+							path: 'it/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {
+									// NProgress.done();
+									jw.setTitle({ title: '途中订单' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(6).then((function (require) {
+										var model = __webpack_require__(1837)["default"];
+										model.state['model_type'] = 'it';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1835)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}]);
+					}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+				}
+			}]);
+		}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+	}
+};
+
+/***/ }),
+
+/***/ 901:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _constants = __webpack_require__(197);
+
+module.exports = {
+	path: 'newstoregc',
+	getChildRoutes: function getChildRoutes(partialNextState, cb) {
+		new Promise(function(resolve) { resolve(); }).then((function (require) {
+			cb(null, [{
+				path: 'approval/:orderid',
+				indexRoute: {
+					onEnter: function onEnter() {
+						jw.setTitle({ title: 'DOA审批' });
+					},
+					getComponent: function getComponent(location, callback) {
+						__webpack_require__.e/* require.ensure */(26).then((function (require) {
+							var model = __webpack_require__(1893)["default"];
+							(0, _constants.registerModel)(app, model);
+							callback(null, __webpack_require__(1879)["default"]);
+						}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+					}
+				}
+			}, {
+				path: 'view/:orderid',
+				indexRoute: {
+					onEnter: function onEnter(location) {
+						// jw.setTitle({title:'途中订单'});
+						if (location.location.query && location.location.query.sta) {
+							switch (location.location.query.sta) {
+								case '1':
+									jw.setTitle({ title: '在途订单' });
+									break;
+								case '2':
+									jw.setTitle({ title: '历史订单' });
+									break;
+							}
+						}
+					},
+					getComponent: function getComponent(location, callback) {
+						__webpack_require__.e/* require.ensure */(26).then((function (require) {
+							var model = __webpack_require__(1893)["default"];
+							(0, _constants.registerModel)(app, model);
+							callback(null, __webpack_require__(1879)["default"]);
+						}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+					}
+				}
+			}]);
+		}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+	}
+};
+
+/***/ }),
+
+/***/ 902:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _constants = __webpack_require__(197);
+
+module.exports = {
+  path: 'newstoreit',
+  getChildRoutes: function getChildRoutes(partialNextState, cb) {
+    new Promise(function(resolve) { resolve(); }).then((function (require) {
+      cb(null, [{
+        //新店非GC的PM审核，不能进行操作（不知道以后会不会打开6,4）
+        // 需求阶段－Local PM确认（IT TSI确认）
+        path: 'pmconfirm/:orderid',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            jw.setTitle({ title: '确认明细' });
+          },
+          getComponent: function getComponent(location, callback) {
+            __webpack_require__.e/* require.ensure */(10).then((function (require) {
+              var model = __webpack_require__(1862)["default"];
+              (0, _constants.registerModel)(app, model);
+              callback(null, __webpack_require__(1850)["default"]);
+            }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+          }
+        }
+      }, {
+        // 需求阶段-DOA审批 （IT Func/Dept）	
+        // type=1  代表普通审批
+        path: 'approval/:orderid',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            // 审批
+            if (location.location.query.type == '1') {
+              jw.setTitle({ title: '审批' });
+            } else {
+              jw.setTitle({ title: '404' });
+            }
+          },
+          getComponent: function getComponent(location, callback) {
+            // 审批
+            if (location.location.query.type == '1') {
+              __webpack_require__.e/* require.ensure */(10).then((function (require) {
+                var model = __webpack_require__(1862)["default"];
+                (0, _constants.registerModel)(app, model);
+                callback(null, __webpack_require__(1850)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+              // 404
+            } else {
+              new Promise(function(resolve) { resolve(); }).then((function (require) {
+                callback(null, __webpack_require__(343)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+            }
+          }
+        }
+      }, {
+        // 订单阶段－DOA送货调整审批 type=1 （IT） (拆单后的)
+        // 订单阶段－餐厅确认评价 type=4 （IT） (拆单后的)
+        path: 'approvalorder/:orderid',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            // 审批／调整审批 具体是审批还是调整审批，需要拿到订单信息以后通过节点状态来重新设置 
+            if (location.location.query.type == '1') {
+              jw.setTitle({ title: '调整审批' });
+              // 餐厅确认收货(IT)
+            } else if (location.location.query.type == '4') {
+              jw.setTitle({ title: '确认收货' });
+            } else {
+              jw.setTitle({ title: '404' });
+            }
+          },
+          getComponent: function getComponent(location, callback) {
+            // 审批／调整审批 具体是审批还是调整审批，需要拿到订单信息以后通过节点状态来重新设置 
+            if (location.location.query.type == '1' || location.location.query.type == '4') {
+              __webpack_require__.e/* require.ensure */(23).then((function (require) {
+                var model = __webpack_require__(1847)["default"];
+                (0, _constants.registerModel)(app, model);
+                callback(null, __webpack_require__(1878)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+              // 404
+            } else {
+              new Promise(function(resolve) { resolve(); }).then((function (require) {
+                callback(null, __webpack_require__(343)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+            }
+          }
+        }
+      }, {
+        // 订单阶段－IT设备 列表页面
+        // objecttype可以为 equipment project it
+        path: 'info-list/:objecttype/:orderid',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            var titles = { 'equipment': '设备明细', 'project': '工程明细', 'it': 'IT设备明细' };
+            var title = titles[location.params.objecttype];
+            jw.setTitle({ title: _.isUndefined(title) ? '404' : title });
+          },
+          getComponent: function getComponent(location, callback) {
+            if (_.indexOf(['equipment', 'project', 'it'], location.params.objecttype) != -1) {
+              __webpack_require__.e/* require.ensure */(46).then((function (require) {
+                var model = __webpack_require__(1847)["default"];
+                (0, _constants.registerModel)(app, model);
+                callback(null, __webpack_require__(1903)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+              // 404
+            } else {
+              new Promise(function(resolve) { resolve(); }).then((function (require) {
+                callback(null, __webpack_require__(343)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+            }
+          }
+        }
+      }, {
+        // PM确认供应商的需求明细－－餐厅列表
+        path: 'pmstore-list/:orderid/:vendorNumber/:vendorType',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            jw.setTitle({ title: '餐厅信息' });
+          },
+          getComponent: function getComponent(location, callback) {
+            __webpack_require__.e/* require.ensure */(51).then((function (require) {
+              var model = __webpack_require__(1960)["default"];
+              (0, _constants.registerModel)(app, model);
+              callback(null, __webpack_require__(1905)["default"]);
+            }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+          }
+        }
+      }, {
+        // PM确认供应商的需求明细－－采购明细列表（含设备,工程,IT）
+        path: 'pminfo-list/:orderid/:vendorNumber/:storeNumber/:vendorType',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            jw.setTitle({ title: '采购明细' });
+          },
+          getComponent: function getComponent(location, callback) {
+            __webpack_require__.e/* require.ensure */(45).then((function (require) {
+              var model = __webpack_require__(1959)["default"];
+              (0, _constants.registerModel)(app, model);
+              callback(null, __webpack_require__(1904)["default"]);
+            }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+          }
+        }
+      }, {
+        // 需求阶段-在途详情页面
+        path: 'view/it/:orderid',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            // jw.setTitle({title:'在途订单'});
+            if (location.location.query && location.location.query.sta) {
+              switch (location.location.query.sta) {
+                case '1':
+                  jw.setTitle({ title: '在途订单' });
+                  break;
+                case '2':
+                  jw.setTitle({ title: '历史订单' });
+                  break;
+              }
+            } else {
+              jw.setTitle('404');
+            }
+          },
+          getComponent: function getComponent(location, callback) {
+            __webpack_require__.e/* require.ensure */(10).then((function (require) {
+              var model = __webpack_require__(1862)["default"];
+              (0, _constants.registerModel)(app, model);
+              callback(null, __webpack_require__(1850)["default"]);
+            }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+          }
+        }
+      }, {
+        /** 订单阶段-在途详情页面
+         *
+         * @param objecttype: equipment project it
+         * @param orderid 订单ID
+         */
+        path: 'vieworder/:objecttype/:orderid',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            // jw.setTitle({title:'在途订单'});
+            if (location.location.query && location.location.query.sta) {
+              switch (location.location.query.sta) {
+                case '1':
+                  jw.setTitle({ title: '在途订单' });
+                  break;
+                case '2':
+                  jw.setTitle({ title: '历史订单' });
+                  break;
+              }
+            } else {
+              jw.setTitle('404');
+            }
+          },
+          getComponent: function getComponent(location, callback) {
+            if (_.indexOf(['it'], location.params.objecttype) != -1) {
+              __webpack_require__.e/* require.ensure */(23).then((function (require) {
+                var model = __webpack_require__(1847)["default"];
+                (0, _constants.registerModel)(app, model);
+                callback(null, __webpack_require__(1878)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+            }
+          }
+        }
+      }]);
+    }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+  }
+}; // 新店／改造非GC IT流程整体改造，单独拆出一套路由
+
+/***/ }),
+
+/***/ 903:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _constants = __webpack_require__(197);
+
+module.exports = {
+  path: 'nonproject',
+  getChildRoutes: function getChildRoutes(partialNextState, cb) {
+    new Promise(function(resolve) { resolve(); }).then((function (require) {
+      cb(null, [{
+        // 新建维修流程 objecttype可以为 equipment project it
+        path: 'createpo/:objecttype(/:orderid)',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            console.log('location:', location, hashHistory);
+            NProgress.done();
+            var title = void 0;
+            if ((0, _constants.isRightRoter)(location.params.objecttype)) {
+              title = location.params.orderid ? '调整' + _constants.MAINTYPE_DICTS[location.params.objecttype] + '采购需求' : '创建' + _constants.MAINTYPE_DICTS[location.params.objecttype] + '采购需求';
+            } else {
+              title = '404';
+            }
+            jw.setTitle({ title: title });
+          },
+          getComponent: function getComponent(location, callback) {
+            if ((0, _constants.isRightRoter)(location.params.objecttype)) {
+              __webpack_require__.e/* require.ensure */(57).then((function (require) {
+                var model = __webpack_require__(1961)["default"];
+                (0, _constants.registerModel)(app, model);
+                callback(null, __webpack_require__(1906)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+            } else {
+              new Promise(function(resolve) { resolve(); }).then((function (require) {
+                callback(null, __webpack_require__(343)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+            }
+          }
+        }
+      }, {
+        // 审批 （含设备／工程／IT）(审批节点含： OC审批，OM审批，DO审批，GM审批，DOA审批，送货调整DOA审批) 送货调整DOA审批-deliverdoa
+        // objecttype可以为 equipment project it
+        // type=1  代表普通审批    type=4  表示餐厅提交
+        path: 'approval/:objecttype/:orderid',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            console.log('location:', location, hashHistory);
+            NProgress.done();
+            if (location.location.query.type) {
+              console.log('走这里了吗');
+              var type = location.location.query.type;
+              if (type == '4') {
+                jw.setTitle({ title: '餐厅确认' });
+              } else if (type == '10') {
+                jw.setTitle({ title: '审批' });
+              } else if (type == '1') {
+                jw.setTitle({ title: 'DOA审批' });
+              } else if (type == '3') {
+                jw.setTitle({ title: '调整后审批' });
+              }
+            } else {
+              jw.setTitle('404');
+            }
+          },
+          getComponent: function getComponent(location, callback) {
+            if ((0, _constants.isRightRoter)(location.params.objecttype)) {
+              __webpack_require__.e/* require.ensure */(22).then((function (require) {
+                var model = __webpack_require__(1894)["default"];
+                var objecttype = location.params.objecttype;
+                var type = location.query.type;
+                var subProcessList = {
+                  'equipment': {
+                    '1': '32',
+                    '3': '32',
+                    '4': '32',
+                    '10': '31'
+                  },
+                  'it': {
+                    '1': '33',
+                    '3': '33',
+                    '4': '33',
+                    '10': '36'
+                  },
+                  'project': {
+                    '1': '34',
+                    '3': '34',
+                    '4': '34',
+                    '10': '36'
+                    // console.log(objecttype,'objecttypeobjecttypeobjecttypeobjecttypeobjecttype');
+                  } };model.state['objecttype'] = objecttype;
+                model.state['subProcess'] = subProcessList[objecttype][type];
+                (0, _constants.registerModel)(app, model);
+                callback(null, __webpack_require__(1880)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+            } else {
+              new Promise(function(resolve) { resolve(); }).then((function (require) {
+                callback(null, __webpack_require__(343)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+            }
+          }
+        }
+      }, {
+        //查看更多供应商信息
+        path: 'vendor-info/:orderid/:objecttype/:type',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            NProgress.done();
+            console.log(location, "location");
+            if (location.params.orderid) {
+              switch (location.params.objecttype) {
+                case 'equipment':
+                  jw.setTitle({ title: '设备明细' });
+                  break;
+                case 'project':
+                  jw.setTitle({ title: '工程明细' });
+                  break;
+                case 'it':
+                  jw.setTitle({ title: 'IT明细' });
+                  break;
+              }
+            } else {
+              jw.setTitle('404');
+            }
+          },
+          getComponent: function getComponent(location, callback) {
+            console.log(location, "location");
+            if (location.params.orderid) {
+              __webpack_require__.e/* require.ensure */(42).then((function (require) {
+                var model = __webpack_require__(1962)["default"];
+
+                (0, _constants.registerModel)(app, model);
+                callback(null, __webpack_require__(1907)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+            } else {
+              new Promise(function(resolve) { resolve(); }).then((function (require) {
+                callback(null, __webpack_require__(343)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+            }
+          }
+        }
+      }, {
+        //查看在途、历史订单信息
+        path: 'view-info/:view/:objecttype/:orderid',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            NProgress.done();
+            if (location.location.query && location.location.query.sta) {
+              switch (location.location.query.sta) {
+                case '1':
+                  jw.setTitle({ title: '在途订单' });
+                  break;
+                case '2':
+                  jw.setTitle({ title: '历史订单' });
+                  break;
+              }
+            } else {
+              jw.setTitle('404');
+            }
+            /*if(location.params.view){
+              switch(location.params.view){
+                case 'view':
+                jw.setTitle({title:'在途订单'});
+                break;
+                case 'vieworder':
+                jw.setTitle({title:'在途订单'});
+                break;
+              }
+            }else{
+              jw.setTitle( '404' );
+            }*/
+          },
+          getComponent: function getComponent(location, callback) {
+            console.log(location, "location");
+            if (location.params.orderid) {
+              __webpack_require__.e/* require.ensure */(22).then((function (require) {
+                var objecttype = location.params.objecttype;
+                var view = location.params.view;
+                var subProcessList = {
+                  'view': {
+                    'equipment': '31',
+                    'project': '35',
+                    'it': '36'
+                  },
+                  'vieworder': {
+                    'equipment': '32',
+                    'project': '33',
+                    'it': '34'
+                  }
+                };
+                var model = __webpack_require__(1894)["default"];
+                model.state['subProcess'] = subProcessList[view][objecttype];
+                model.state['objecttype'] = objecttype;
+                (0, _constants.registerModel)(app, model);
+                callback(null, __webpack_require__(1880)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+            } else {
+              new Promise(function(resolve) { resolve(); }).then((function (require) {
+                callback(null, __webpack_require__(343)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+            }
+          }
+        }
+      }]);
+    }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+  }
+}; // 非项目页面相关路由
+
+/***/ }),
+
+/***/ 904:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _constants = __webpack_require__(197);
+
+module.exports = {
+  path: 'project',
+  getChildRoutes: function getChildRoutes(partialNextState, cb) {
+    new Promise(function(resolve) { resolve(); }).then((function (require) {
+      cb(null, [{
+        // PM确认供应商的需求明细（含设备／工程／IT），不需要区分
+        path: 'pmconfirm/:orderid',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            jw.setTitle({ title: '确认明细' });
+          },
+          getComponent: function getComponent(location, callback) {
+            __webpack_require__.e/* require.ensure */(9).then((function (require) {
+              var model = __webpack_require__(1863)["default"];
+              (0, _constants.registerModel)(app, model);
+              callback(null, __webpack_require__(1851)["default"]);
+            }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+          }
+        }
+      }, {
+        /* 
+          项目采购需求：
+          1. Local PM确认供应商的需求明细： 设备／工程／IT 获取供应商需求明细 接口中，返回字段中都会加一个市场信息的list，待后面出图排产
+          2. DOA审批 设备／工程／IT 页面，也会增加市场信息的list展示，待后面出图排产,和1共用一个页面
+          3. 餐厅确认评价（设备／工程）／餐厅确认收货（IT）,页面不会展示市场信息list,但和4是共用的一个页面
+          4. 送货调整，DOA审批：（设备／工程），会增加市场信息的list展示，（IT）是否有市场信息的list展示，待德勤 确认？
+        */
+        // 审批 （含设备／工程／IT）(审批节点： DOA审批) (拆单前的)
+        // type=1  代表普通审批
+        path: 'approval/:orderid',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            // 审批
+            if (location.location.query.type == '1') {
+              jw.setTitle({ title: '审批' });
+            } else {
+              jw.setTitle({ title: '404' });
+            }
+          },
+          getComponent: function getComponent(location, callback) {
+            // 审批
+            if (location.location.query.type == '1') {
+              __webpack_require__.e/* require.ensure */(9).then((function (require) {
+                var model = __webpack_require__(1863)["default"];
+                (0, _constants.registerModel)(app, model);
+                callback(null, __webpack_require__(1851)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+              // 404
+            } else {
+              new Promise(function(resolve) { resolve(); }).then((function (require) {
+                callback(null, __webpack_require__(343)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+            }
+          }
+        }
+      }, {
+        // 调整审批 type=1 （含设备／工程／IT）(审批节：送货调整DOA审批) (拆单后的)
+        // 餐厅确认评价(设备，工程)／ 餐厅确认收货(IT) type=4 (含设备／工程／IT)
+        // objecttype可以为 equipment project it
+        path: 'approval/:objecttype/:orderid',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            // 审批／调整审批 具体是审批还是调整审批，需要拿到订单信息以后通过节点状态来重新设置 
+            if (location.location.query.type == '1') {
+              jw.setTitle({ title: '调整审批' });
+              // 餐厅确认评价(设备，工程)／ 餐厅确认收货(IT)
+            } else if (location.location.query.type == '4') {
+              jw.setTitle({ title: '确认评价' });
+              // jw.setTitle({title:(location.params.objecttype=='it' ? '确认收货' : '确认评价')});
+            } else {
+              jw.setTitle({ title: '404' });
+            }
+          },
+          getComponent: function getComponent(location, callback) {
+            // 审批／调整审批 具体是审批还是调整审批，需要拿到订单信息以后通过节点状态来重新设置 
+            if (location.location.query.type == '1' || location.location.query.type == '4') {
+              __webpack_require__.e/* require.ensure */(21).then((function (require) {
+                var model = __webpack_require__(1848)["default"];
+                (0, _constants.registerModel)(app, model);
+                callback(null, __webpack_require__(1881)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+              // 404
+            } else {
+              new Promise(function(resolve) { resolve(); }).then((function (require) {
+                callback(null, __webpack_require__(343)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+            }
+          }
+        }
+      }, {
+        // 设备，工程，IT 列表页面
+        // objecttype可以为 equipment project it
+        path: 'info-list/:objecttype/:orderid',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            var titles = { 'equipment': '设备明细', 'project': '工程明细', 'it': 'IT设备明细' };
+            var title = titles[location.params.objecttype];
+            jw.setTitle({ title: _.isUndefined(title) ? '404' : title });
+          },
+          getComponent: function getComponent(location, callback) {
+            if (_.indexOf(['equipment', 'project', 'it'], location.params.objecttype) != -1) {
+              __webpack_require__.e/* require.ensure */(44).then((function (require) {
+                var model = __webpack_require__(1848)["default"];
+                (0, _constants.registerModel)(app, model);
+                callback(null, __webpack_require__(1908)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+              // 404
+            } else {
+              new Promise(function(resolve) { resolve(); }).then((function (require) {
+                callback(null, __webpack_require__(343)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+            }
+          }
+        }
+      }, {
+        // PM确认供应商的需求明细－－餐厅列表
+        path: 'pmstore-list/:orderid/:vendorNumber/:vendorType',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            jw.setTitle({ title: '餐厅信息' });
+          },
+          getComponent: function getComponent(location, callback) {
+            __webpack_require__.e/* require.ensure */(50).then((function (require) {
+              var model = __webpack_require__(1964)["default"];
+              (0, _constants.registerModel)(app, model);
+              callback(null, __webpack_require__(1910)["default"]);
+            }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+          }
+        }
+      }, {
+        // PM确认供应商的需求明细－－采购明细列表（含设备,工程,IT）
+        path: 'pminfo-list/:orderid/:vendorNumber/:storeNumber/:vendorType',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            jw.setTitle({ title: '采购明细' });
+          },
+          getComponent: function getComponent(location, callback) {
+            __webpack_require__.e/* require.ensure */(43).then((function (require) {
+              var model = __webpack_require__(1963)["default"];
+              (0, _constants.registerModel)(app, model);
+              callback(null, __webpack_require__(1909)["default"]);
+            }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+          }
+        }
+      }, {
+        // 项目需求在途详情页面
+        path: 'view/:orderid',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            // jw.setTitle({title:'在途订单'});
+            if (location.location.query && location.location.query.sta) {
+              switch (location.location.query.sta) {
+                case '1':
+                  jw.setTitle({ title: '在途订单' });
+                  break;
+                case '2':
+                  jw.setTitle({ title: '历史订单' });
+                  break;
+              }
+            } else {
+              jw.setTitle('404');
+            }
+          },
+          getComponent: function getComponent(location, callback) {
+            __webpack_require__.e/* require.ensure */(9).then((function (require) {
+              var model = __webpack_require__(1863)["default"];
+              (0, _constants.registerModel)(app, model);
+              callback(null, __webpack_require__(1851)["default"]);
+            }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+          }
+        }
+      }, {
+        /** 项目订单在途详情页面
+         *
+         * @param objecttype: equipment project it
+         * @param orderid 订单ID
+         */
+        path: 'vieworder/:objecttype/:orderid',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            // jw.setTitle({title:'在途订单'});
+            if (location.location.query && location.location.query.sta) {
+              switch (location.location.query.sta) {
+                case '1':
+                  jw.setTitle({ title: '在途订单' });
+                  break;
+                case '2':
+                  jw.setTitle({ title: '历史订单' });
+                  break;
+              }
+            } else {
+              jw.setTitle('404');
+            }
+          },
+          getComponent: function getComponent(location, callback) {
+            if (_.indexOf(['equipment', 'project', 'it'], location.params.objecttype) != -1) {
+              __webpack_require__.e/* require.ensure */(21).then((function (require) {
+                var model = __webpack_require__(1848)["default"];
+                (0, _constants.registerModel)(app, model);
+                callback(null, __webpack_require__(1881)["default"]);
+              }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+            }
+          }
+        }
+      }]);
+    }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+  }
+}; // 项目采购相关路由
+
+/***/ }),
+
+/***/ 905:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _constants = __webpack_require__(197);
+
+// 备注详情
+module.exports = {
+	// 备注详情
+	path: 'remarksdetail',
+	indexRoute: {
+		onEnter: function onEnter() {
+			jw.setTitle({ title: '备注详情' });
+		},
+		getComponent: function getComponent(nextState, cb) {
+			__webpack_require__.e/* require.ensure */(49).then((function (require) {
+				var model = __webpack_require__(1965)["default"];
+				(0, _constants.registerModel)(app, model);
+				cb(null, __webpack_require__(1911)["default"]);
+			}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+		}
+	}
+};
+
+/***/ }),
+
+/***/ 906:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _constants = __webpack_require__(197);
+
+module.exports = {
+	path: 'repairing',
+	getChildRoutes: function getChildRoutes(partialNextState, cb) {
+		new Promise(function(resolve) { resolve(); }).then((function (require) {
+			cb(null, [{
+				// 新建维修流程
+				path: 'createpo',
+				getChildRoutes: function getChildRoutes(partialNextState, cb) {
+					new Promise(function(resolve) { resolve(); }).then((function (require) {
+						cb(null, [{
+							// 新建设备维修
+							path: 'equipment',
+							indexRoute: {
+								onEnter: function onEnter() {
+									NProgress.done();
+									jw.setTitle({ title: '创建设备维修' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(28).then((function (require) {
+										var model = __webpack_require__(1966)["default"];
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1912)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							// 新建工程维修 todo
+							path: 'project',
+							indexRoute: {
+								onEnter: function onEnter() {
+									jw.setTitle({ title: '创建工程维修' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(29).then((function (require) {
+										var model = __webpack_require__(1974)["default"];
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1913)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							// 新建IT维修 
+							path: 'it',
+							indexRoute: {
+								onEnter: function onEnter() {
+									jw.setTitle({ title: '创建IT维修' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(12).then((function (require) {
+										var model = __webpack_require__(1895)["default"];
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1882)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}]);
+					}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+				}
+			}, {
+				// 选择对象 设备／配件／工程／餐厅
+				path: 'add-edit',
+				getChildRoutes: function getChildRoutes(partialNextState, cb) {
+					new Promise(function(resolve) { resolve(); }).then((function (require) {
+						cb(null, [{
+							// 选择设备
+							path: 'equipment',
+							indexRoute: {
+								onEnter: function onEnter() {
+									jw.setTitle({ title: '添加维修设备' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(37).then((function (require) {
+										var searchModel = __webpack_require__(1433)["default"];
+										(0, _constants.registerModel)(app, searchModel);
+										callback(null, __webpack_require__(1915)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							// 选择设备配件 设备信息等通过cache传递到PartsSearch组件
+							path: 'parts',
+							indexRoute: {
+								onEnter: function onEnter() {
+									jw.setTitle({ title: '添加设备配件' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(34).then((function (require) {
+										var searchModel = __webpack_require__(1433)["default"];
+										(0, _constants.registerModel)(app, searchModel);
+										callback(null, __webpack_require__(1925)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							// 选择IT设备配件 it设备信息等通过cache传递到ItPartsSearch组件
+							path: 'itparts',
+							indexRoute: {
+								onEnter: function onEnter() {
+									jw.setTitle({ title: '添加设备配件' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(36).then((function (require) {
+										var searchModel = __webpack_require__(1433)["default"];
+										(0, _constants.registerModel)(app, searchModel);
+										callback(null, __webpack_require__(1921)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							// 选择工程
+							path: 'project',
+							indexRoute: {
+								onEnter: function onEnter() {
+									jw.setTitle({ title: '添加维修工程' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(33).then((function (require) {
+										var searchModel = __webpack_require__(1433)["default"];
+										(0, _constants.registerModel)(app, searchModel);
+										callback(null, __webpack_require__(1927)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							// 选择IT设备
+							path: 'it',
+							indexRoute: {
+								onEnter: function onEnter() {
+									jw.setTitle({ title: '添加维修IT设备' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(35).then((function (require) {
+										var searchModel = __webpack_require__(1433)["default"];
+										(0, _constants.registerModel)(app, searchModel);
+										callback(null, __webpack_require__(1922)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							// 选择餐厅
+							path: 'store',
+							indexRoute: {
+								onEnter: function onEnter() {
+									jw.setTitle({ title: '添加餐厅' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(30).then((function (require) {
+										var searchModel = __webpack_require__(1433)["default"];
+										(0, _constants.registerModel)(app, searchModel);
+										callback(null, __webpack_require__(1930)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							// 选择供应商
+							path: 'repairstore',
+							indexRoute: {
+								onEnter: function onEnter() {
+									jw.setTitle({ title: '选择供应商' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(32).then((function (require) {
+										var searchModel = __webpack_require__(1433)["default"];
+										(0, _constants.registerModel)(app, searchModel);
+										callback(null, __webpack_require__(1928)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							// 选择资产报废
+							path: 'scrapped',
+							indexRoute: {
+								onEnter: function onEnter() {
+									jw.setTitle({ title: '挑选资产报废' });
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(31).then((function (require) {
+										var searchModel = __webpack_require__(1433)["default"];
+										(0, _constants.registerModel)(app, searchModel);
+										callback(null, __webpack_require__(1929)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}]);
+					}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+				}
+			}, {
+				// 供应商评估/确认 type=1 供应商评估  2 供应商确认订单 
+				path: 'assess',
+				getChildRoutes: function getChildRoutes(partialNextState, cb) {
+					new Promise(function(resolve) { resolve(); }).then((function (require) {
+						cb(null, [{
+							// 供应商评估-设备  注：工程类维修无评估／确认
+							path: 'equipment/:orderid',
+							indexRoute: {
+								onEnter: function onEnter(location) {
+									if (location.location.query.type == 1) {
+										jw.setTitle({ title: '供应商评估' });
+									} else if (location.location.query.type == 2) {
+										jw.setTitle({ title: '维修确认' });
+									} else {
+										jw.setTitle({ title: '404' });
+									}
+									NProgress.done();
+									jw.setFuncBtns([{ type: 4 }]);
+								},
+								getComponent: function getComponent(location, callback) {
+									if (location.location.query.type == 1 || location.location.query.type == 2) {
+										__webpack_require__.e/* require.ensure */(40).then((function (require) {
+											var model = __webpack_require__(1976)["default"];
+											(0, _constants.registerModel)(app, model);
+											callback(null, __webpack_require__(1931)["default"]);
+										}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+									} else {
+										new Promise(function(resolve) { resolve(); }).then((function (require) {
+											callback(null, __webpack_require__(343)["default"]);
+										}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+									}
+								}
+							}
+						}, {
+							// 餐厅拒绝后，供应商重新评估订单，也是此组件，调用时，需传type=1
+							// 供应商确认-IT 同createpo/it共用同一组件 此组件修改时需做判断  真正调用时 需传 ?type=2
+							path: 'it/:orderid',
+							indexRoute: {
+								onEnter: function onEnter(location) {
+									if (location.location.query.type == 1) {
+										jw.setTitle({ title: '重新评估IT维修' });
+									} else if (location.location.query.type == 2) {
+										jw.setTitle({ title: '订单确认' });
+									} else {
+										jw.setTitle({ title: '404' });
+									}
+									jw.setFuncBtns([{ type: 4 }]);
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(12).then((function (require) {
+										var model = __webpack_require__(1895)["default"];
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1882)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}]);
+					}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+				}
+			}, {
+				// 供应商响应
+				path: 'response',
+				getChildRoutes: function getChildRoutes(partialNextState, cb) {
+					new Promise(function(resolve) { resolve(); }).then((function (require) {
+						cb(null, [{
+							// 供应商响应-设备
+							path: 'equipment/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {
+									jw.setTitle({ title: '供应商响应' });
+									jw.setFuncBtns([{ type: 4 }]);
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(15).then((function (require) {
+										var model = __webpack_require__(1898)["default"];
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1886)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							// 供应商响应-工程 
+							path: 'project/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {
+
+									jw.setTitle({ title: '供应商响应' });
+									jw.setFuncBtns([{ type: 4 }]);
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(19).then((function (require) {
+										var model = __webpack_require__(1897)["default"];
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1887)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}]);
+					}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+				}
+			}, {
+				// 供应商-设备维修详单
+				path: 'maintenance-details/equipment/:orderid/:equipmentid',
+				indexRoute: {
+					onEnter: function onEnter() {
+						NProgress.done();
+						jw.setTitle({ title: '设备维修详单' });
+					},
+					getComponent: function getComponent(location, callback) {
+						__webpack_require__.e/* require.ensure */(56).then((function (require) {
+							var model = __webpack_require__(1972)["default"];
+							(0, _constants.registerModel)(app, model);
+							callback(null, __webpack_require__(1923)["default"]);
+						}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+					}
+				},
+				getChildRoutes: function getChildRoutes(partialNextState, cb) {
+					new Promise(function(resolve) { resolve(); }).then((function (require) {
+						cb(null, []);
+					}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+				}
+			}, {
+				// TSI-IT维修详单 IT设备信息由localstorage中获取，以willEditITEquipment字段存储在localstorage里了
+				path: 'maintenance-details/it',
+				indexRoute: {
+					onEnter: function onEnter() {
+						jw.setTitle({ title: 'IT维修详单' });
+					},
+					getComponent: function getComponent(location, callback) {
+						__webpack_require__.e/* require.ensure */(55).then((function (require) {
+							var model = __webpack_require__(1973)["default"];
+							(0, _constants.registerModel)(app, model);
+							callback(null, __webpack_require__(1924)["default"]);
+						}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+					}
+				},
+				getChildRoutes: function getChildRoutes(partialNextState, cb) {
+					new Promise(function(resolve) { resolve(); }).then((function (require) {
+						cb(null, []);
+					}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+				}
+			}, {
+				// 设备信息编辑
+				path: 'edit-info/equipment/:orderid/:equipmentid',
+				indexRoute: {
+					onEnter: function onEnter() {
+						NProgress.done();
+						jw.setTitle({ title: '设备信息编辑' });
+					},
+					getComponent: function getComponent(location, callback) {
+						__webpack_require__.e/* require.ensure */(61).then((function (require) {
+							var model = __webpack_require__(1968)["default"];
+							(0, _constants.registerModel)(app, model);
+							callback(null, __webpack_require__(1917)["default"]);
+						}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+					}
+				},
+				getChildRoutes: function getChildRoutes(partialNextState, cb) {
+					new Promise(function(resolve) { resolve(); }).then((function (require) {
+						cb(null, []);
+					}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+				}
+			}, {
+				// IT设备信息编辑  IT设备信息从localstorage里面取 不需要通过链接传递
+				path: 'edit-info/it',
+				indexRoute: {
+					onEnter: function onEnter() {
+						jw.setTitle({ title: '设备信息编辑' });
+					},
+					getComponent: function getComponent(location, callback) {
+						__webpack_require__.e/* require.ensure */(60).then((function (require) {
+							var model = __webpack_require__(1969)["default"];
+							(0, _constants.registerModel)(app, model);
+							callback(null, __webpack_require__(1918)["default"]);
+						}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+					}
+				},
+				getChildRoutes: function getChildRoutes(partialNextState, cb) {
+					new Promise(function(resolve) { resolve(); }).then((function (require) {
+						cb(null, []);
+					}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+				}
+			}, {
+				// type= 1:餐厅待确认 2：DOA审批 3：审批未通过，餐厅再次审批(3和1合并，3作废) 4：餐厅确认订单，评价
+				path: 'process',
+				onEnter: function onEnter() {},
+				getChildRoutes: function getChildRoutes(partialNextState, cb) {
+					new Promise(function(resolve) { resolve(); }).then((function (require) {
+						cb(null, [{
+							path: 'equipment/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(20).then((function (require) {
+										var model = __webpack_require__(1896)["default"];
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1883)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							path: 'it/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(17).then((function (require) {
+										var model = __webpack_require__(1838)["default"];
+										model['state']['processType'] = 'it';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1884)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							path: 'project/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(16).then((function (require) {
+										var model = __webpack_require__(1838)["default"];
+										model['state']['processType'] = 'project';
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1885)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}]);
+					}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+				}
+			}, {
+				// 审批
+				path: 'approval',
+				indexRoute: {
+					onEnter: function onEnter() {
+						NProgress.done();
+						jw.setTitle({ title: '审批流程' });
+					},
+					getComponent: function getComponent(nextState, cb) {
+						__webpack_require__.e/* require.ensure */(27).then((function (require) {
+							// let model = require('../models/Log')["default"];
+							// registerModel(app,model);
+							cb(null, __webpack_require__(1872)["default"]);
+						}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+					}
+				}
+			}, {
+				// 编辑
+				path: 'edit-money/:orderid/:equipmentid',
+				indexRoute: {
+					onEnter: function onEnter() {
+						NProgress.done();
+						jw.setTitle({ title: '维修费用编辑' });
+					},
+					getComponent: function getComponent(location, callback) {
+						__webpack_require__.e/* require.ensure */(59).then((function (require) {
+							var model = __webpack_require__(1970)["default"];
+							(0, _constants.registerModel)(app, model);
+							callback(null, __webpack_require__(1919)["default"]);
+						}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+					}
+				}
+			}, {
+				path: 'equipment-info/:orderid',
+				indexRoute: {
+					onEnter: function onEnter() {
+						NProgress.done();
+						jw.setTitle({ title: '设备明细' });
+					},
+					getComponent: function getComponent(nextState, cb) {
+						__webpack_require__.e/* require.ensure */(48).then((function (require) {
+							var model = __webpack_require__(1967)["default"];
+							(0, _constants.registerModel)(app, model);
+							cb(null, __webpack_require__(1914)["default"]);
+						}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+					}
+				}
+			}, {
+				path: 'project-info/:orderid',
+				indexRoute: {
+					onEnter: function onEnter() {
+						NProgress.done();
+						jw.setTitle({ title: '工程明细' });
+					},
+					getComponent: function getComponent(nextState, cb) {
+						__webpack_require__.e/* require.ensure */(47).then((function (require) {
+							var model = __webpack_require__(1975)["default"];
+							(0, _constants.registerModel)(app, model);
+							cb(null, __webpack_require__(1926)["default"]);
+						}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+					}
+				}
+			}, {
+				path: 'it-info/:orderid',
+				indexRoute: {
+					onEnter: function onEnter() {
+						NProgress.done();
+						jw.setTitle({ title: 'IT设备明细' });
+					},
+					getComponent: function getComponent(nextState, cb) {
+						__webpack_require__.e/* require.ensure */(38).then((function (require) {
+							// let model = require('../models/Repair/ItInfo')["default"];
+							var model = __webpack_require__(1971)["default"];
+							(0, _constants.registerModel)(app, model);
+							cb(null, __webpack_require__(1920)["default"]);
+						}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+					}
+				}
+			}, {
+				path: 'edit-confrim',
+				indexRoute: {
+					onEnter: function onEnter() {
+						NProgress.done();
+						jw.setTitle({ title: '维修确认' });
+						typeof jw.setHeaderLine == 'function' ? jw.setHeaderLine({ status: 0 }) : '';
+					},
+					getComponent: function getComponent(nextState, cb) {
+						__webpack_require__.e/* require.ensure */(41).then((function (require) {
+							var model = __webpack_require__(1957)["default"];
+							(0, _constants.registerModel)(app, model);
+							cb(null, __webpack_require__(1916)["default"]);
+						}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+					}
+				}
+			}, {
+				// 在途、历史订单详情
+				path: 'view',
+				getChildRoutes: function getChildRoutes(partialNextState, cb) {
+					new Promise(function(resolve) { resolve(); }).then((function (require) {
+						cb(null, [{
+							path: 'equipment/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {
+									// jw.setTitle({title:'在途订单'});
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(20).then((function (require) {
+										var model = __webpack_require__(1896)["default"];
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1883)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							path: 'it/:orderid',
+							indexRoute: {
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(17).then((function (require) {
+										var model = __webpack_require__(1838)["default"];
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1884)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							path: 'project/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(16).then((function (require) {
+										var model = __webpack_require__(1838)["default"];
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1885)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}]);
+					}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+				}
+			}, {
+				// 在途、历史维修项目订单详情
+				path: 'vieworder',
+				getChildRoutes: function getChildRoutes(partialNextState, cb) {
+					new Promise(function(resolve) { resolve(); }).then((function (require) {
+						cb(null, [{
+							path: 'project/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {
+									jw.setFuncBtns([{ type: 4 }]);
+								},
+								getComponent: function getComponent(location, callback) {
+									/*require.ensure([], (require) => {
+         	let model = require('../models/Repair/Process')["default"];
+         	registerModel(app,model);
+         	callback(null, require('../chunk/Repair/ProcessProject')["default"]);
+         }, '../chunk/Repair/ProcessProject.js')*/
+									__webpack_require__.e/* require.ensure */(19).then((function (require) {
+										var model = __webpack_require__(1897)["default"];
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1887)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}, {
+							path: 'equipment/:orderid',
+							indexRoute: {
+								onEnter: function onEnter() {
+									// jw.setTitle({title:'在途订单'});
+									jw.setFuncBtns([{ type: 4 }]);
+								},
+								getComponent: function getComponent(location, callback) {
+									__webpack_require__.e/* require.ensure */(15).then((function (require) {
+										var model = __webpack_require__(1898)["default"];
+										(0, _constants.registerModel)(app, model);
+										callback(null, __webpack_require__(1886)["default"]);
+									}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+								}
+							}
+						}]);
+					}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+				}
+			}]);
+		}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+	}
+}; // 维修页面相关路由
+
+/***/ }),
+
+/***/ 907:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _constants = __webpack_require__(197);
+
+module.exports = {
+	path: 'scrapped/:orderid',
+	indexRoute: {
+		onEnter: function onEnter() {
+			jw.setTitle({ title: '资产报废' });
+		},
+		getComponent: function getComponent(nextState, cb) {
+			__webpack_require__.e/* require.ensure */(54).then((function (require) {
+				var model = __webpack_require__(1864)["default"];
+				(0, _constants.registerModel)(app, model);
+				cb(null, __webpack_require__(1900)["default"]);
+			}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+		}
+	}
+};
+
+/***/ }),
+
+/***/ 908:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _constants = __webpack_require__(197);
+
+module.exports = {
+	path: 'scrappeddevice',
+	indexRoute: {
+		onEnter: function onEnter() {
+			jw.setTitle({ title: '挑选资产报废' });
+		},
+		getComponent: function getComponent(nextState, cb) {
+			__webpack_require__.e/* require.ensure */(53).then((function (require) {
+				var model = __webpack_require__(1864)["default"];
+				(0, _constants.registerModel)(app, model);
+				cb(null, __webpack_require__(1901)["default"]);
+			}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+		}
+	}
+};
+
+/***/ }),
+
+/***/ 909:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _constants = __webpack_require__(197);
+
+// 待办路由
+module.exports = {
+	// 待办列表，状态(我的待办／未完结)，类别（全部／维修／非项目／新店日常／保养／项目／新店GC）
+	path: 'todo-info',
+	indexRoute: {
+		onEnter: function onEnter() {
+			jw.setTitle({ title: '订单详情' });
+		},
+		getComponent: function getComponent(nextState, cb) {
+			__webpack_require__.e/* require.ensure */(14).then((function (require) {
+				var model = __webpack_require__(1977)["default"];
+				(0, _constants.registerModel)(app, model);
+				cb(null, __webpack_require__(1934)["default"]);
+			}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+		}
+	}
+};
+
+/***/ }),
+
+/***/ 910:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _constants = __webpack_require__(197);
+
+// 待办路由
+module.exports = {
+  // 待办列表，状态(0-我的待办／1-途中订单/2-历史订单)，类别（全部／维修／非项目／新店日常／保养／项目／新店GC）
+  path: 'todos(/type/:type/status/:status)',
+  indexRoute: {
+    onEnter: function onEnter() {
+      /*jw.showTabs({
+      	tabs:[
+      		"我的待办","在途订单","历史订单"
+      	],
+      	position:'top',//是否设置在顶部
+      	style:"F55928",
+           focusidx:status
+      });
+         // 过滤按钮
+         jw.setFuncBtns([{type:0}]);*/
+      typeof jw.setHeaderLine == 'function' ? jw.setHeaderLine({ status: 0 }) : '';
+    },
+    getComponent: function getComponent(nextState, cb) {
+      __webpack_require__.e/* require.ensure */(14).then((function (require) {
+        var model = __webpack_require__(1865)["default"],
+            params = nextState.query;
+        model.state.status = typeof params.status == 'undefined' ? 0 : params.status;
+        model.state.businessType = typeof params.type == 'undefined' ? 'all' : params.type;
+        (0, _constants.registerModel)(app, model);
+        cb(null, __webpack_require__(1933)["default"]);
+      }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+    }
+  },
+  getChildRoutes: function getChildRoutes(partialNextState, cb) {
+    new Promise(function(resolve) { resolve(); }).then((function (require) {
+      cb(null, [{
+        path: 'filter',
+        indexRoute: {
+          onEnter: function onEnter(location, hashHistory) {
+            jw.setTitle({ title: '筛选' });
+          },
+          getComponent: function getComponent(location, callback) {
+            __webpack_require__.e/* require.ensure */(39).then((function (require) {
+              // let model = require('../models/todosFilter')["default"];
+              var model = __webpack_require__(1865)["default"];
+              (0, _constants.registerModel)(app, model);
+              callback(null, __webpack_require__(1932)["default"]);
+            }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+          }
+        }
+      }]);
+    }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+  }
+};
+
+/***/ })
+
+});

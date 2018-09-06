@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/**
+ * 待办列表样式
+ */
+.bg-yellow {
+  background: #FFD600;
+}
+
+.bg-orange {
+  background: #F55928;
+}
+
+.todos-item.todos-nonproject-item .todos-item-c {
+  padding-bottom: 0;
+}
+.todos-item.todos-nonproject-item .todos-total-info {
+  text-align: center;
+  position: relative;
+  margin: 0.4347826087rem 0 0.3381642512rem;
+  overflow: hidden;
+}
+.todos-item.todos-nonproject-item .todos-total-info:before {
+  position: absolute;
+  top: 0;
+  top: 0.5314009662rem;
+  left: 46%;
+  right: 0;
+  display: inline-block;
+  content: '';
+  width: 0.6280193237rem;
+  height: 1px;
+  background: #e7e7e7;
+}
+.todos-item.todos-nonproject-item .todos-total-info font {
+  display: block;
+  font-size: 0.4830917874rem;
+  color: #494949;
+}
+.todos-item.todos-nonproject-item .todos-total-info label {
+  display: block;
+  font-size: 0.2415458937rem;
+  color: #999999;
+  margin-top: -0.0724637681rem;
+  margin-bottom: 0;
+}
+.todos-item.todos-nonproject-item .todos-total-info .todos-store-num {
+  float: left;
+  width: 40%;
+}
+.todos-item.todos-nonproject-item .todos-total-info .totos-total-cost {
+  float: right;
+  width: 40%;
+}
+.todos-item.todos-nonproject-item .todos-total-info .totos-total-cost font {
+  color: #f55928;
+}
+.todos-item.todos-nonproject-item .todos-nonproject-table table {
+  width: 100%;
+}
+.todos-item.todos-nonproject-item .todos-nonproject-table table tr td {
+  color: #666666;
+  font-size: 0.3381642512rem;
+  width: 20%;
+  height: 0.8937198068rem;
+  line-height: 0.8937198068rem;
+  text-align: center;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.todos-item.todos-nonproject-item .todos-nonproject-table table tr td font {
+  height: 100%;
+}
+.todos-item.todos-nonproject-item .todos-nonproject-table table thead {
+  background: #fafafa;
+}
+.todos-item.todos-nonproject-item .todos-nonproject-table table thead tr td {
+  font-size: 0.3140096618rem;
+}
+.todos-item.todos-nonproject-item .todos-nonproject-table table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.todos-null {
+  margin-top: 5.3140096618rem;
+  text-align: center;
+}
+.todos-null .icon-todos-null {
+  width: 4.8309178744rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.todos-null .icon-todos-null img {
+  width: 2.0531400966rem;
+  margin: 0 auto;
+}
+.todos-null div.desc {
+  font-size: 0.3381642512rem;
+  color: #666666;
+  text-align: center;
+  margin-top: 0.5555555556rem;
+}
+
+.todos-nomore, .noMore-Data {
+  font-size: 16px;
+  color: #999999;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.todos-loading {
+  width: 1.9323671498rem;
+  height: 1.690821256rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 5.652173913rem;
+  text-align: center;
+}
+.todos-loading img {
+  width: 1.9323671498rem;
+  height: 1.690821256rem;
+}
+.todos-loading span {
+  display: block;
+  margin-top: 0.3623188406rem;
+  font-size: 0.3381642512rem;
+  color: #999999;
+  text-align: center;
+}
